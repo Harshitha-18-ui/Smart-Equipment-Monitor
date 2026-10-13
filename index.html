@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Equipment Monitor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Smart Equipment Monitor</h1>
+    <p>Industrial IoT Monitoring Dashboard</p>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h3>Current Temperature</h3>
+        <p id="temperature">32.5 °C</p>
+      </div>
+      <div class="card">
+        <h3>Equipment Status</h3>
+        <p id="status">Normal</p>
+      </div>
+      <div class="card">
+        <h3>Temperature Limit</h3>
+        <p>50 °C</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Temperature History</h2>
+      <canvas id="temperatureChart"></canvas>
+    </section>
+
+    <section class="panel">
+      <h2>System Alerts</h2>
+      <p id="alert">System operating normally.</p>
+      <button onclick="simulateReading()">
+        Simulate New Reading
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
